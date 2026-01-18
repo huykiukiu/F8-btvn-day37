@@ -10,7 +10,7 @@ export default function Step1() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({
     resolver: zodResolver(step1Schema),
     defaultValues: step1Data,
@@ -81,6 +81,7 @@ export default function Step1() {
       </div>
       <div className="flex justify-around mt-10">
         <button
+          disabled={true}
           type="button"
           className="bg-[#364153] border px-3 py-2 cursor-pointer rounded-md"
         >
@@ -88,7 +89,11 @@ export default function Step1() {
         </button>
         <button
           type="submit"
-          className="bg-[#364153] border px-3 py-2 cursor-pointer rounded-md"
+          className={
+            isValid
+              ? "bg-blue-500 text-white border px-3 py-2 cursor-pointer rounded-md"
+              : "bg-[#364153] border px-3 py-2 cursor-pointer rounded-md"
+          }
         >
           Next
         </button>

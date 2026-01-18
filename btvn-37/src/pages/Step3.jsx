@@ -23,14 +23,14 @@ export default function Step3() {
       <div className="flex justify-around mt-10">
         <button
           type="button"
-          className="bg-[#364153] border px-3 py-2 cursor-pointer rounded-md"
+          className="bg-blue-500 text-white border px-3 py-2 cursor-pointer rounded-md"
           onClick={() => navigate("/step2")}
         >
           Previous
         </button>
         <button
           type="submit"
-          className="bg-[#364153] border px-3 py-2 cursor-pointer rounded-md"
+          className="bg-blue-500 text-white border px-3 py-2 cursor-pointer rounded-md"
           ref={ref}
         >
           Next
