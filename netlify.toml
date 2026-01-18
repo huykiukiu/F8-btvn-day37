@@ -1,0 +1,4 @@
+[build]
+  base = "btvn-37"
+  command = "npm run build"
+  publish = "dist"
